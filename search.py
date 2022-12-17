@@ -3,5 +3,9 @@ def searching():
     with open('data.txt','r') as file:
         lines = file.readlines()
         for line in lines:
+            res = 0
             if surname in line:
                 print(line.strip())
+                res += 1
+        if res == 0:
+            print('Такой записи нет!')
